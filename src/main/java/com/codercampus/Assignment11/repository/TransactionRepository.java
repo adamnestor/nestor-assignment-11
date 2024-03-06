@@ -19,8 +19,8 @@ public class TransactionRepository {
 		populateData();
 	}
 
-	public Transaction findById(Integer transactionId) {
-		return transactions.stream().filter(transaction -> transaction.getId().equals((long) transactionId)).findAny().orElse(null);
+	public Transaction findById(Long transactionId) {
+		return transactions.stream().filter(transaction -> transaction.getId().equals(transactionId)).findAny().orElse(null);
 	}
 
 	public List<Transaction> findAll() {

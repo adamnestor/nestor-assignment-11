@@ -16,7 +16,7 @@ public class TransactionService {
 	@Autowired
 	private TransactionRepository transactionRepo;
 
-	public Transaction findById(Integer transactionId) {
+	public Transaction findById(Long transactionId) {
 		return transactionRepo.findById(transactionId);
 	}
 
