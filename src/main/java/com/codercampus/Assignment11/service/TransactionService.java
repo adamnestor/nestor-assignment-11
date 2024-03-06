@@ -22,8 +22,6 @@ public class TransactionService {
 
 	public List<Transaction> findAllAndSortByAscendingDate() {
 		List<Transaction> transactions = transactionRepo.findAll();
-		return transactions.stream()
-						.sorted(Comparator.comparing(Transaction::getDate))
-						.collect(Collectors.toList());
+		return transactions.stream().sorted(Comparator.comparing(Transaction::getDate)).collect(Collectors.toList());
 	}
 }
