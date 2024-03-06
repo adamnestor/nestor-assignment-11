@@ -20,7 +20,7 @@ public class TransactionRepository {
 	}
 
 	public Transaction findById(Integer transactionId) {
-		return transactions.stream().filter(t -> t.getId().equals((long) transactionId)).findAny().orElse(null);
+		return transactions.stream().filter(transaction -> transaction.getId().equals((long) transactionId)).findAny().orElse(null);
 	}
 
 	public List<Transaction> findAll() {
