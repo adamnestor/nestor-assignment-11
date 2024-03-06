@@ -1,0 +1,29 @@
+<html xmlns:th="http://thymeleaf.org">
+	<head>
+		<title>Online Bank</title>
+	</head>
+	
+	<body>
+		<h1>Transaction ID: 38 (Credit)</h1>
+		
+		<div>
+			<label>Date: </label>
+			<input type="text" th:field="${transaction.date}"/>
+		</div>
+		
+		<div>
+			<label>Amount: </label>
+			<input type="text" th:field="${transaction.amount}"/>
+		</div>
+		
+		<div>
+			<label>Description: </label>
+			<input type="text" th:field="${transaction.description}"/>
+		</div>
+		
+		<div>
+			<a href="/transactions">Back</a>
+		</div>
+		
+	</body>
+</html>
