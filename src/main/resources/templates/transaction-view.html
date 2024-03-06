@@ -1,32 +1,16 @@
 <html xmlns:th="http://thymeleaf.org">
 	<head>
-		<div th:if="${transaction != null">
+		<div>
 			<title>Transaction #[[${transaction.id}]] Details</title>
 		</div>
 		<link rel="stylesheet" href="/css/transactions.css"/>
 	</head>
 	
 	<body>
-		<h1>Transaction ID: 38 (Credit)</h1>
-		
-		<div>
-			<label>Date: </label>
-			<input type="text" th:field="${transaction.date}"/>
-		</div>
-		
-		<div>
-			<label>Amount: </label>
-			<input type="text" th:field="${transaction.amount}"/>
-		</div>
-		
-		<div>
-			<label>Description: </label>
-			<input type="text" th:field="${transaction.description}"/>
-		</div>
-		
-		<div>
-			<a href="/transactions">Back</a>
-		</div>
+		<h2>Transaction ID: [[${transaction.id}]]
+			<span th:if="${transaction.type == 'D'}">(Debit)</span>
+			<span th:if="${transaction.type == 'C'}">(Credit)</span>			
+		</h2>
 		
 	</body>
 </html>
