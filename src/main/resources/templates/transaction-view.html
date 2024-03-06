@@ -19,10 +19,9 @@
 			<span th:if="${transaction.type == 'C'}">-[[${transaction.amount}]]</span>
 			<br>
 			<span>Description: </span>[[${transaction.description}]]
-		</p>
-		<div>
+			<br>
 			<a th:href="@{/transactions}">Back</a>
-		</div>
+		</p>
 		
 	</body>
 </html>
