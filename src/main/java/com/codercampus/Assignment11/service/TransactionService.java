@@ -16,8 +16,8 @@ public class TransactionService {
 	@Autowired
 	private TransactionRepository transactionRepo;
 
-	public Transaction findById(int id) {
-		return transactionRepo.findById(id);
+	public Transaction findById(Integer transactionId) {
+		return transactionRepo.findById(transactionId);
 	}
 
 	public List<Transaction> findAllAndSortByAscendingDate() {

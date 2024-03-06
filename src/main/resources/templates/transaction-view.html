@@ -11,6 +11,18 @@
 			<span th:if="${transaction.type == 'D'}">(Debit)</span>
 			<span th:if="${transaction.type == 'C'}">(Credit)</span>			
 		</h2>
+		<p>
+			<span>Date: </span>[[${transaction.date}]]
+			<br>
+			<span>Amount: </span> 
+			<span th:if="${transaction.type == 'D'}">[[${transaction.amount}]]</span>
+			<span th:if="${transaction.type == 'C'}">-[[${transaction.amount}]]</span>
+			<br>
+			<span>Description: </span>[[${transaction.description}]]
+		</p>
+		<div>
+			<a th:href="@{/transactions}">Back</a>
+		</div>
 		
 	</body>
 </html>

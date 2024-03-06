@@ -19,6 +19,10 @@ public class TransactionRepository {
 		populateData();
 	}
 
+	public Transaction findById(Integer transactionId) {
+		return transactions.stream().filter(t -> t.getId().equals((long) transactionId)).findAny().orElse(null);
+	}
+
 	public List<Transaction> findAll() {
 		return transactions;
 	}
@@ -54,7 +58,4 @@ public class TransactionRepository {
 
 	}
 
-	public Transaction findById(int id) {
-		return transactions.get(id);
-	}
 }
