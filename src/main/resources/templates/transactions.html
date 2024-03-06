@@ -19,7 +19,8 @@
 
 		<tr th:each="transaction : ${transactions}">
 			<td>
-				<a th:text="${transaction.id}" th:href="@{/transactions/{transactionId}(transactionId=${transaction.id})}"></a>
+				<a th:text="${transaction.id}"
+					th:href="@{/transactions/{transactionId}(transactionId=${transaction.id})}"></a>
 			</td>
 			<td th:text="${transaction.date}"></td>
 			<td th:text="${transaction.retailer}"></td>
