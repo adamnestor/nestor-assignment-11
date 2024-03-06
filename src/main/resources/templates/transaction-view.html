@@ -1,6 +1,9 @@
 <html xmlns:th="http://thymeleaf.org">
 	<head>
-		<title>Online Bank</title>
+		<div th:if="${transaction != null">
+			<title>Transaction #[[${transaction.id}]] Details</title>
+		</div>
+		<link rel="stylesheet" href="/css/transactions.css"/>
 	</head>
 	
 	<body>
